@@ -49,6 +49,10 @@ Scikit Learn, NumPy, Pandas, os, StandardScaler, linear_model (ElasticNetCV, Las
 It is possible to use regression to predict energy output with some accuracy (0.7 r^2, with LOO CV)
  
 ![Energy Usage](Data/Energy_Usage.png)
+<p float="left">
+  <img src="Data/Energy_Usage.png" width="300" />
+  <img src="Data/years.png" width="300" /> 
+</p>
 
 This shows that with a linear increase in sq_footage, the predicted energy usage increases
 
@@ -58,7 +62,7 @@ This shows that with a linear increase in sq_footage, the predicted energy usage
 
 The model can be used to judge if a property is above or below the Boston energy usage average, for 10 property types.
 
-### Summarys
+### Summary
 
 It is possible to fit a regression model to predict with some accuracy how much energy a building in Boston will use.
 #### Most important findings.
