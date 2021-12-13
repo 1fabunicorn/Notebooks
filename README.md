@@ -7,7 +7,7 @@ We wanted to estimate a value related to the environment, from a dataset from bo
 
 #### What was the research question, the tested hypothesis or the purpose of the research?
 
-We were wondering what features will make the best prediction from a dataset with many features.
+We were wondering what characteristics will make the best prediction from a dataset with many features.
 
 #### What is the source of the dataset? Characteristics of data?
 4 years of records for buildings in Boston. Includes 64 different property types, where we only used the top 10. Also used to 97% quantile for outliers in the total energy usage (what we are predicting)
@@ -36,15 +36,21 @@ Total Site Energy (kBTU) | Property Type | Gross Area (sq ft) | Year Built
 2099052.8 | 4| 38000.0| 1900.0                                              
 30925692.5| 4| 61168.0| 1920.0    
 
+![Predicted Value plot](Data/Distribution.png)
+
+Shows that after the 97% split, the predicted values fall mostly under 20000000, to 80000000
 
 ### Methods
 #### What materials/APIs/tools were used or who was included in answering the research question?
-Scikit Learn, NumPy, Pandas, os, StandardScaler, linear_model (ElasticNetCV, LassoCV, RidgeCV), cross_validation
+Scikit Learn, NumPy, Pandas, os, StandardScaler, linear_model (ElasticNetCV, LassoCV, RidgeCV), and cross_validation
 
 ### Results
 #### What answer was found to the research question; what did the study find? Was the tested hypothesis true? Any visualizations?
 It is possible to use regression to predict energy output with some accuracy (0.7 r^2, with LOO CV)
+ 
+![Energy Usage](Data/Energy_Usage.png)
 
+Shows that with a linear increase in sq_footage,the predicted energy usage increases
 
 
 ### Discussion
@@ -52,6 +58,10 @@ It is possible to use regression to predict energy output with some accuracy (0.
 
 The model can be used to judge if a property is above or below boston energy usage average, for 10 property types.
 
-### Summary
+### Summarys 
+
+It is possible to fit a regression model to predict with some accuracy how much energy a building in Boston will use.
 #### Most important findings.
+
+More then 10 property types decrease preformance (less training samples?)
 
